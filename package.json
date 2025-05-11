@@ -5,6 +5,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js",
     "build": "rimraf dist && tsc -p tsconfig.json",
     "version": "auto-changelog -p && git add CHANGELOG.md",
     "lint": "prettier --write .",
@@ -20,7 +22,8 @@
     "test:lightnovels": "jest ./test/light-novels",
     "test:news": "jest ./test/news",
     "test:meta": "jest ./test/meta"
-  },
+  }
+ 
   "pre-commit": [
     "lint",
     "build"
